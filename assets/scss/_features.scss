@@ -1,0 +1,83 @@
+/* ----------------------------------
+	Feature section Styles
+------------------------------------ */
+
+.feature_wrapper{
+    &.feature_wrapper_2{
+        margin-top: 0px;
+        &::after{
+            display: none;
+        }
+    }
+    z-index: 1;
+    margin-top: -130px;
+    position: relative;
+    &::after{
+        bottom: 0%;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height:calc(60% + 40px);
+        content: '';
+        position: absolute;
+       background: #F8F6F2;
+    }
+}
+.single_feature_item{
+    background-color: $secondary-3;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+    .single_feature_widget{
+        border-radius: 6px;
+        border: 2px solid $secondary-3;
+       @include transition(0.4s);
+        padding: 30px 20px;
+        text-align: center;
+        .single_icon{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: auto;
+                height: 40px;
+            }
+            margin: 0 auto;
+            border-radius: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 30px;
+        }
+        .single_content{
+            h4{
+                margin-bottom: 20px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 33px;
+                color: $white;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+    .law_element_1{
+        top: 0;
+        right: 0 !important;
+        display: inline-block;
+    }
+    .law_element_2{
+        bottom:calc(10% - 20px);
+        left:0;
+    }
+    .law_element_1,.law_element_2{
+        position: absolute;
+    }
+    &:hover{
+        .single_feature_widget{
+            border: 2px solid #B69D74;
+        }
+    }
+}
